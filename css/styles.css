@@ -14,62 +14,98 @@ h1 {
     padding-left: .5rem;
 }
 
-
-.header {
-    overflow: hidden;
-    background-color: green;
+* {
+    box-sizing: border-box;
   }
   
-  /* Style the header links */
-  .header a {
-    font-family: 'Work Sans', sans-serif;
+  body {
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
-    float: left;
-    color: #FAC8D1;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 17px;
-    line-height: .5em;
-    letter-spacing: 0em;
-    border-radius: 4px;
   }
   
-  /* Change the background color on mouse-over */
-  .header a:hover {
-    color: #F593A5;
-  }
-  
-  /* Style the active/current link*/
-  .header a.active {
-    color: #FAC8D1;
-  }
-  
-  /* Float the link section to the right */
-  .header-right {
-    float: right;
-  }
-  
-  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-  @media screen and (max-width: 500px) {
-    .header a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .header-right {
-      float: none;
-    }
-  }
-
-   /* The sticky class is added to the header with JS when it reaches its scroll position */
-   .sticky {
+  header {
+    background: #333;
+    padding: 2rem;
     position: fixed;
-    top: 0;
-    width: 100%
+    width: 100%;
+    z-index: 100;
   }
   
-  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 102px;
+  header a {
+    color: #fff;
+  }
+  
+  h1 {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  .poem-wrapper {
+    padding: 5rem 2rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+  }
+  
+  p {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .byline {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+  
+  .about-author {
+    background-color: #f2f2f2;
+    margin-top: 5rem;
+    padding: 2rem 2rem 1rem 2rem;
+  }
+  
+  .about-author h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-author p {
+    font-size: 0.875rem;
+  }
+  
+  .about-author a {
+    color: red;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s ease-out;
+  }
+  
+  .about-author a:hover {
+    color: #000;
+  }
+  
+  @media screen and (min-width: 700px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+    }
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+  
+  @media screen and (min-width: 1080px) {
+    .poem-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    .about-author {
+      max-width: 500px;
+    }
   }

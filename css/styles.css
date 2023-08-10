@@ -9,7 +9,7 @@ h1 {
     color: #ffffff;
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
-    font-size: 28px;
+    font-size: 17px;
     padding-top: 1rem;
     padding-left: .5rem;
 }
@@ -19,8 +19,9 @@ h1 {
   }
   
   body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 300;
+    font-size: 17px;
   }
   
   header {
@@ -35,61 +36,58 @@ h1 {
     color: #fff;
   }
   
-  h1 {
-    color: #fff;
-    margin-bottom: 1rem;
-  }
-  
-  .poem-wrapper {
-    padding: 5rem 2rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    margin-top: 5rem;
-  }
-  
-  p {
-    line-height: 1.5;
-    margin-bottom: 1rem;
-  }
-  
-  .byline {
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-  }
-  
-  .about-author {
-    background-color: #f2f2f2;
-    margin-top: 5rem;
-    padding: 2rem 2rem 1rem 2rem;
-  }
-  
-  .about-author h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .about-author p {
-    font-size: 0.875rem;
-  }
-  
-  .about-author a {
-    color: red;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.5s ease-out;
-  }
-  
-  .about-author a:hover {
-    color: #000;
-  }
-  
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column img {
+    margin-top: 150px;
+    vertical-align: middle;
+    border: 2px solid #010b13;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
   @media screen and (min-width: 700px) {
     header {
       display: flex;
